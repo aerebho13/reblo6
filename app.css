@@ -1,0 +1,335 @@
+/*global*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+:root{
+    --primary:gold;
+}
+html {
+    font-size: 62.5%;/*1rem=10px*/
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    font-family: "Roboto", sans-serif;
+}
+img{
+    max-width: 100%;
+    min-height: 100%;
+}
+a{
+    text-decoration: none;
+}
+/*utilities*/
+.read-btn{
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+
+/*menu*/
+.main-news-img{
+    padding-bottom: 2rem;
+}
+nav.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 35px;
+    padding: 5px 10px 5px 20px;
+}
+nav.menu img.big-logo{
+    display: none;
+    height: 35px;
+}
+nav.menu img.small-logo{
+    display: block;
+    height: 30px;
+}
+nav.menu a{
+    margin-right: 25px;
+}
+a.login-link{
+    color: black;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+a.sub-link{
+text-transform: uppercase;
+font-size: 12px;
+font-weight: 700;
+font-family: "Roboto", sans-serif;
+text-align: center;
+align-items: center;
+background-color: black;
+color: white;
+padding: 15.5px;
+letter-spacing: 3px;
+box-shadow: inset 0 0 0 0 gold;
+transition: ease-out 0.3s;
+}
+a.sub-link:hover{
+    box-shadow: inset 150px 0 0 0 gold;
+    cursor: pointer;
+    color: black;
+}
+a.arrows-link{
+color: black;
+font-size: 15px;
+}
+
+a.search-link,a.renew-link{
+display: none;
+font-size: 15px;
+font-weight: 400;
+color: black;
+}
+a.renew-link{
+    border-bottom: 2px solid gold;
+    box-shadow: inset 0 0 0 0 gold;
+    transition: linear 0.3s;
+}
+a.renew-link:hover{
+    box-shadow: inset 75px 0 0 0 gold;
+    cursor: pointer;
+    color: black;
+}
+
+a.menu-link{
+    display: none;
+    font-size: 15px;
+    font-weight: 700;
+    color: black;
+    font-family: century;
+    letter-spacing: 3px;
+}
+
+@media(min-width:768px){
+    .menu-links{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav.menu img.big-logo, 
+    a.search-link,
+    a.renew-link,
+    a.menu-link {
+        display: block;
+    }
+    nav.menu img.small-logo {
+        display: none;
+    }
+}
+
+/*header*/
+header {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    padding-top: 2cm;
+    
+}
+header h1{
+    font-size: 41px;
+    letter-spacing: 6px;
+    padding-top: 1cm
+}
+p.sub{
+    letter-spacing: 1px;
+    font-size: 16px;
+    padding-top: 15px;
+    padding-bottom: 40px;
+}
+button{
+    width: auto;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: none;
+    box-shadow: inset 0 0 0 0 gold;
+    transition: ease-out 0.3s;
+    outline: none;
+    border-bottom: 2px solid var(--primary);
+}
+button:hover{
+    box-shadow: inset 75px 0 0 0 gold;
+    cursor: pointer;
+    color: black;
+}
+hr{
+    display: flex;
+    border-bottom: 4px solid gold; 
+    width: 55px;
+    position: absolute;
+    bottom: 63%;
+    right: 48%;
+}
+
+/*main-news*/
+.main-news {
+position: relative;/*parent*/
+width: 95%;
+margin: 1rem auto;
+}
+
+.main-news-text {
+    position: absolute;/*child*/
+    top: 100px;
+    left: 30px;
+    color: white;
+}
+.main-news-text p.title {
+    font-size: 3.5rem;
+    margin: 1rem 0;/*tb rl*/
+}
+.main-news-text h3 {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin: 1rem 0;
+}
+.main-news-text h3 span {
+    font-weight: 300;
+}
+.main-news-text h3:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+/*secondary-news*/
+.secondary-news{
+    width: 95%;
+    margin: 1rem auto;
+}
+.secondary-news-img{
+    height: 30rem;
+    overflow: hidden;
+}
+.secondary-news-img img:hover{
+    transform: scale(1.1);
+    border-bottom: 40rem solid gold;
+}
+.secondary-news-text{
+    display: block;
+    background-color: white;
+    height: 12rem;
+    padding: 1rem;
+}
+.secondary-news-text h3{
+    color: grey;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin: 1rem 0;
+    text-transform: uppercase;
+}
+.secondary-news-text h3 span{
+    font-weight: 300;
+}
+.secondary-news-text h3:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.secondary-news-text p.title{
+    font-size: 1.8rem;
+    font-weight: 700;
+    word-spacing: 0.5rem;
+    color: black;
+}
+.secondary-news-text p.read-btn{
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+@media (min-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+    .secondary-news-container {
+        display: flex;
+    }
+    .secondary-news {
+        width: 30rem;
+    }
+    .secondary-news:first-child {
+        margin-right: 1rem;
+    }
+    .secondary-news-img {
+        height: 30rem;
+    }
+    .main-news {
+        width: 61rem;
+    }
+}
+
+/*todays picks*/
+.flex-header{
+    display: flex;
+    color: white;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom: 40px;
+    letter-spacing: .4rem;
+    border-left: 5px solid gold;
+    height: 40px;
+    padding-left: 18px;
+}
+
+.flex-item{
+    display: flex; 
+    width: 95%;
+    margin: 2.5rem auto;   
+}
+.flex-item img{
+    display: flex;
+    width: 8rem;
+    height: 6rem;
+}
+
+.flex-item p{
+    display: flex;
+    color: white;
+    font-size: 1.6rem;
+    padding-left: 1rem;
+}
+.flex-item h4{
+    display: flex;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin: .8rem 0;
+    padding-left: 1rem;
+}
+.flex-item h4:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.see-more{
+    width: auto;
+    font-size: 13px;
+    background-color: black;
+    color: white;
+    border: none;
+    box-shadow: inset 0 0 0 0 gold;
+    transition: ease-out 0.3s;
+    outline: none;
+    border-bottom: 2px solid var(--primary);
+}
+.see-more:hover{
+    box-shadow: inset 75px 0 0 0 gold;
+    cursor: pointer;
+    color: black;
+}
